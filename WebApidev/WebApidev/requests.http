@@ -1,0 +1,28 @@
+@baseUrl = http://localhost:5259
+
+###
+GET {{baseUrl}}/api/items
+
+###
+GET {{baseUrl}}/api/items/1
+
+###
+POST {{baseUrl}}/api/items
+Content-Type: application/json
+
+{
+    "name": "New Item from HTTP File",
+    "description": "This is a new item created via a POST request."
+}
+
+###
+POST {{baseUrl}}/api/items/1
+Content-Type: application/json
+
+{
+    "name": "Updated Laptop",
+    "description": "A powerful computing device that is now updated."
+}
+
+###
+DELETE {{baseUrl}}/api/items/1
